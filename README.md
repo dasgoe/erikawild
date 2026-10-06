@@ -8,7 +8,7 @@ nl.html        → one-pager NL (Experiment 01 · zonder zicht)
 contact.html   → contactformulier FR (Formspree)
 contact-nl.html → contactformulier NL (zelfde Formspree-formulier, veld `langue`)
 css/style.css  → design tokens + componenten
-img/           → favicon (svg), portret (webp 480/720/1080), og-afbeelding
+img/           → favicon (svg), portret (webp 480/720/1080), og-afbeelding, galerij ew-*.webp (warm zwart-wit)
 robots.txt / sitemap.xml (met hreflang FR/NL)
 ```
 

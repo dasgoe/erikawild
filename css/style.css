@@ -216,6 +216,24 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 .checks li::before{ content:""; position:absolute; left:0; top:1.35rem; width:1.3rem; height:6px; background:currentColor; transform:rotate(-8deg); }
 .section-light .checks li{ border-color:var(--line-light); }
 
+/* sur le terrain / op het terrein: foto's van vorige ateliers, warm zwart-wit */
+.gallery{
+  width:min(100% - 2rem, 72rem); margin:2.5rem auto 0;
+  display:grid; gap:.6rem; grid-template-columns:1fr 1fr;
+  grid-template-areas:"marche mains" "marche tambour" "chemin chemin" "terre terre";
+}
+.gallery figure{ margin:0; overflow:hidden; background:var(--black); }
+.gallery img{ width:100%; height:100%; object-fit:cover; }
+.g-marche{ grid-area:marche; }
+.g-mains{ grid-area:mains; aspect-ratio:1; }
+.g-tambour{ grid-area:tambour; aspect-ratio:1; }
+.g-chemin{ grid-area:chemin; aspect-ratio:3/2; }
+.g-terre{ grid-area:terre; aspect-ratio:3/1; }
+@media (min-width:860px){
+  .gallery{ grid-template-columns:repeat(3, 1fr); grid-template-areas:"marche mains tambour" "marche chemin chemin" "terre terre terre"; }
+  .g-chemin{ aspect-ratio:2/1; }
+}
+
 /* formules + prijs */
 .offers{ list-style:none; margin:2rem 0 0; padding:0; }
 .offers li{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.25rem 1rem; padding:1rem 0; border-top:1px solid var(--line-light); }
