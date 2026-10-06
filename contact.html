@@ -1,16 +1,21 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr-BE">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 <title>Contact — Erika Wild</title>
-<meta name="description" content="Une question pour Erika Wild avant de réserver l'expérience 01 ? Écris-moi. Een vraag voor Erika Wild voor je experiment 01 boekt? Schrijf me.">
+<meta name="description" content="Une question pour Erika Wild avant de réserver l'expérience 01 ? Écris-moi, je te réponds moi-même.">
 <link rel="canonical" href="https://erikawild.be/contact.html">
+<link rel="alternate" hreflang="fr" href="https://erikawild.be/contact.html">
+<link rel="alternate" hreflang="nl" href="https://erikawild.be/contact-nl.html">
+<link rel="alternate" hreflang="x-default" href="https://erikawild.be/contact.html">
 <meta property="og:title" content="Contact — Erika Wild">
-<meta property="og:description" content="Une question pour Erika Wild avant de réserver l'expérience 01 ? Écris-moi. Een vraag voor Erika Wild voor je experiment 01 boekt? Schrijf me.">
+<meta property="og:description" content="Une question pour Erika Wild avant de réserver l'expérience 01 ? Écris-moi, je te réponds moi-même.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://erikawild.be/contact.html">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:locale:alternate" content="nl_BE">
 <meta property="og:image" content="https://erikawild.be/img/og-erikawild.jpg">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
@@ -25,10 +30,10 @@
       <ul class="nav-links">
         <li class="hide-sm"><a href="index.html#experience">Expérience 01</a></li>
         <li class="hide-sm"><a href="contact.html" aria-current="page">Contact</a></li>
-        <li class="nav-book"><a href="https://cal.com/CAL_ID">Réserver<span class="sr-only" lang="nl"> / Boeken</span></a></li>
+        <li class="nav-book"><a href="https://cal.com/CAL_ID">Réserver</a></li>
         <li class="sep" aria-hidden="true"></li>
-        <li><a href="index.html" lang="fr" hreflang="fr"><span aria-hidden="true">FR</span><span class="sr-only">Français</span></a></li>
-        <li><a href="nl.html" lang="nl" hreflang="nl"><span aria-hidden="true">NL</span><span class="sr-only">Nederlands</span></a></li>
+        <li><a href="contact.html" lang="fr" hreflang="fr" aria-current="page"><span aria-hidden="true">FR</span><span class="sr-only">Français</span></a></li>
+        <li><a href="contact-nl.html" lang="nl" hreflang="nl"><span aria-hidden="true">NL</span><span class="sr-only">Nederlands</span></a></li>
       </ul>
     </nav>
   </div>
@@ -39,25 +44,16 @@
   <section class="section-black">
     <div class="wrap">
       <p class="band-label">Contact</p>
-      <div class="contact-grid">
-        <div>
-          <p class="lang-tag">FR</p>
-          <h1>Écris-moi</h1>
-          <p>Une question avant de te lancer&nbsp;? Je te réponds moi-même. Pour réserver directement&nbsp;: <a href="https://cal.com/CAL_ID">l'agenda en ligne</a>.</p>
-        </div>
-        <div lang="nl">
-          <p class="lang-tag">NL</p>
-          <h2>Schrijf me</h2>
-          <p>Eerst een vraag? Ik antwoord je zelf. Meteen boeken: <a href="https://cal.com/CAL_ID">de online agenda</a>.</p>
-        </div>
-      </div>
+      <h1>Écris-moi</h1>
+      <p>Une question avant de te lancer&nbsp;? Je te réponds moi-même. Pour réserver directement&nbsp;: <a href="https://cal.com/CAL_ID">l'agenda en ligne</a>.</p>
 
-      <!-- Formulier via Formspree: vervang FORMSPREE_ID door de ID van een apart erikawild.be-formulier en test 1x na deploy. -->
+      <!-- Formulier via Formspree: vervang FORMSPREE_ID door de ID van een apart erikawild.be-formulier (zelfde ID in contact.html en contact-nl.html) en test 1x per taal na deploy. -->
       <form action="https://formspree.io/f/FORMSPREE_ID" method="POST" class="contact-form">
-        <input type="hidden" name="_subject" value="Nouveau message via erikawild.be">
+        <input type="hidden" name="_subject" value="Nouveau message via erikawild.be (FR)">
+        <input type="hidden" name="langue" value="fr">
         <p class="honeypot" aria-hidden="true"><label>Ne pas remplir&nbsp;: <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
         <div>
-          <label for="name">Prénom <span lang="nl">/ Voornaam</span></label>
+          <label for="name">Prénom</label>
           <input type="text" id="name" name="name" autocomplete="given-name" required>
         </div>
         <div>
@@ -65,10 +61,10 @@
           <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required>
         </div>
         <div>
-          <label for="message">Message <span lang="nl">/ Bericht</span></label>
+          <label for="message">Message</label>
           <textarea id="message" name="message" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Envoyer<span lang="nl">&nbsp;/ Versturen</span></button>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
       </form>
     </div>
   </section>

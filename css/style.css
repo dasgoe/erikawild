@@ -227,10 +227,6 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 .offer-price{ font-family:var(--display); font-style:italic; font-size:var(--step-1); line-height:1; white-space:nowrap; }
 
 /* ---------- contact ---------- */
-.contact-grid{ display:grid; gap:2.5rem; }
-@media (min-width:760px){ .contact-grid{ grid-template-columns:1fr 1fr; } }
-.contact-grid h1, .contact-grid h2{ font-size:var(--step-2); }
-.lang-tag{ font-size:.72rem; font-weight:700; letter-spacing:.24em; color:var(--ink-soft); margin-bottom:.5rem; }
 .contact-form{ display:grid; gap:1.2rem; margin-top:2.5rem; }
 .contact-form label{ display:block; font-size:.75rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; margin-bottom:.4rem; }
 .contact-form input, .contact-form textarea{

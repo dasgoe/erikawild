@@ -5,7 +5,8 @@ Statische site, 3 pagina's, pure HTML/CSS. Geen JavaScript, geen cookies, geen e
 ```
 index.html     → one-pager FR (Expérience 01 · sans la vue)
 nl.html        → one-pager NL (Experiment 01 · zonder zicht)
-contact.html   → tweetalig contactformulier (Formspree)
+contact.html   → contactformulier FR (Formspree)
+contact-nl.html → contactformulier NL (zelfde Formspree-formulier, veld `langue`)
 css/style.css  → design tokens + componenten
 img/           → favicon (svg), portret (webp 480/720/1080), og-afbeelding
 robots.txt / sitemap.xml (met hreflang FR/NL)
@@ -24,8 +25,13 @@ robots.txt / sitemap.xml (met hreflang FR/NL)
 - Geen logo: "ERIKA WILD" in systeemletters, kapitalen, gespatieerd. Favicon `img/favicon.svg` = EW in kapitalen.
 
 ## Boeken en prijzen
-- Alle boekknoppen en de link "Réserver / Boeken" (kop, voet, contact) wijzen naar Cal. Plaatshouder `https://cal.com/CAL_ID` vervangen door de echte link (zoek op `CAL_ID`, 16 plekken in 3 bestanden).
-- Individuele sessie: € 75 (1 uur). Groepssessie: € 35 (2 uur). Staat in de slot-sectie, de feitenzin en de JSON-LD (makesOffer) — bij een prijswijziging alle drie aanpassen, FR én NL.
+- Alle boekknoppen en de link "Réserver / Boeken" (kop, voet, contact) wijzen naar Cal. Plaatshouder `https://cal.com/CAL_ID` vervangen door de echte link (zoek op `CAL_ID` in alle html-bestanden).
+- Individuele sessie: € 75 (1 uur). Groepssessie: € 35 per persoon (2 uur). Eén Cal-pagina voor beide. Staat in de slot-sectie, de feitenzin en de JSON-LD (makesOffer) — bij een prijswijziging alle drie aanpassen, FR én NL.
+
+## Twee talen
+- Elke pagina bestaat in FR en NL: `index.html` ↔ `nl.html`, `contact.html` ↔ `contact-nl.html`. Elke pagina linkt naar haar tegenhanger (taalknop), met `hreflang` fr/nl/x-default in de head en in `sitemap.xml`.
+- Google toont in de zoekresultaten de versie in de taal van de zoeker. Wie rechtstreeks naar erikawild.be surft, krijgt altijd FR (x-default). Geen automatische doorverwijzing op browsertaal: dat sluit mensen op in één taal en hindert Google.
+- Wijziging in één taal = ook in de andere, plus meta description, og-tags en JSON-LD.
 
 ## Contrast (WCAG 2.1)
 | Combinatie | Contrast | Norm |
@@ -35,8 +41,8 @@ robots.txt / sitemap.xml (met hreflang FR/NL)
 | #120E0C op #F2EFE9 (lichte vakken, labels) | 16,73:1 | AAA |
 
 ## Vóór livegang
-1. `CAL_ID` vervangen door de echte Cal-link (16 plekken in 3 bestanden) en 1x testboeken.
-2. `FORMSPREE_ID` in `contact.html` vervangen door de ID van een apart erikawild.be-formulier, en 1x testen.
+1. `CAL_ID` vervangen door de echte Cal-link (alle bestanden: zoek op `CAL_ID`) en 1x testboeken.
+2. `FORMSPREE_ID` in `contact.html` en `contact-nl.html` vervangen door de ID van een apart erikawild.be-formulier, en 1x testen.
 3. Mentions légales: naam, adres en KBO-nummer van de aanbieder (vzw of eenmanszaak?).
 4. Nakijken of deze beloftes kloppen: "aucune expérience en danse ou en musique", "tu peux retirer le bandeau à tout moment", "tu choisis ton moment dans l'agenda en ligne".
 5. Aparte GitHub-repo en Netlify-site voor erikawild.be.
