@@ -247,7 +247,7 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 /* wie ik ben: zoals de hero, gespiegeld. Tekst links, foto rechts tot aan de rand */
 .me{ padding:0; display:grid; overflow:hidden; }
 .me-text{ width:var(--measure); margin:0 auto; padding-block:clamp(3rem, 7vw, 5rem); }
-.me-photo{ width:100%; height:78vw; max-height:560px; object-fit:cover; object-position:40% 25%;
+.me-photo{ width:100%; height:100vw; max-height:620px; object-fit:cover; object-position:40% 0%;
   clip-path:polygon(0 2.5rem, 100% 0, 100% 100%, 0 100%); order:-1; }
 @media (min-width:860px){
   .me{ grid-template-columns:1fr 1fr; align-items:center; min-height:min(90vh, 720px); }
@@ -264,9 +264,8 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 .voice figcaption{ margin-top:.5rem; font-size:.8rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-soft); }
 .voice figcaption::before{ content:"— "; }
 .voices-cap{ margin:2rem 0 0; font-size:.85rem; color:var(--ink-soft); }
-.voices-section{ padding-top:0; }
-.voices-section .band-photo{ margin-bottom:clamp(3rem, 7vw, 5rem); }
-.voices-section .band-photo img{ clip-path:polygon(0 0, 100% 0, 100% calc(100% - 2.5rem), 0 100%); }
+/* groepsfoto als los lint tussen twee secties, met zwarte ruimte erboven */
+.band-photo--gap{ margin-top:clamp(2.5rem, 6vw, 4.5rem); }
 
 /* praktisch */
 .prat{ margin:1.5rem 0 2rem; display:grid; gap:1rem; }
