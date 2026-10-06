@@ -22,7 +22,7 @@ robots.txt / sitemap.xml (met hreflang FR/NL)
 - Experimenten: een nieuw experiment = label, lint, titel en lijst in sectie `#experience` (FR) / `#experiment` (NL) vervangen.
 
 ## Merknaam
-- Geen logo: "ERIKA WILD" in systeemletters, kapitalen, gespatieerd. Favicon `img/favicon.svg` = EW in kapitalen.
+- Geen logo: "ERIKA WILD" in systeemletters, kapitalen, gespatieerd. Favicon: "WILD" in de lichte bandeau op zwart. `img/favicon.svg` + `favicon-32.png` (oudere browsers), `apple-touch-icon.png` (bladwijzer/beginscherm iPhone), `icon-192/512.png` + `site.webmanifest` (Android).
 
 ## Boeken en prijzen
 - Alle boekknoppen en de link "Réserver / Boeken" (kop, voet, contact) wijzen naar Cal. Plaatshouder `https://cal.com/CAL_ID` vervangen door de echte link (zoek op `CAL_ID` in alle html-bestanden).
