@@ -33,6 +33,9 @@ robots.txt / sitemap.xml (met hreflang FR/NL)
 - Google toont in de zoekresultaten de versie in de taal van de zoeker. Wie rechtstreeks naar erikawild.be surft, krijgt altijd FR (x-default). Geen automatische doorverwijzing op browsertaal: dat sluit mensen op in één taal en hindert Google.
 - Wijziging in één taal = ook in de andere, plus meta description, og-tags en JSON-LD.
 
+## Inhoud one-pager (volgorde = rode draad)
+hero (vraag) → lint (gedicht) → kernzin + film → [licht] één experiment → Experiment 01 + 4 activiteiten + beelden + plaats → [licht] wat er wakker wordt → brede foto → Ik ben Erika → [licht] stemmen deelnemers (enkel voornamen) → hoe het gaat + formules + FAQ → [licht] prijzen + boeken.
+
 ## Contrast (WCAG 2.1)
 | Combinatie | Contrast | Norm |
 |---|---|---|
