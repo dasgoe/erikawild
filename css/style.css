@@ -281,6 +281,20 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 .faq details[open] summary::after{ content:"–"; }
 .faq details p{ margin:0 0 1rem; color:var(--ink-soft); max-width:60ch; }
 
+/* stemmen: brede foto bovenaan, zonder bovenmarge */
+.voices-section{ padding-top:0; }
+.voices-section .band-photo{ margin-bottom:clamp(3rem, 7vw, 5rem); }
+.voices-section .band-photo img{ clip-path:polygon(0 0, 100% 0, 100% calc(100% - 2.5rem), 0 100%); }
+.split .quote{ font-size:var(--step-1); margin:1.5rem 0 0; }
+#formules .offer-meta{ max-width:46ch; opacity:1; }
+
+/* lichte vakken: tekst en lijnen omkeren */
+.section-light .list li{ border-color:var(--line-light); }
+.section-light .list li::before{ -webkit-text-stroke-color:var(--on-light); }
+.section-light .list p,
+.section-light .place,
+.section-light .voices-cap{ color:var(--on-light); }
+
 /* formules + prijs */
 .offers{ list-style:none; margin:2rem 0 0; padding:0; }
 .offers li{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.25rem 1rem; padding:1rem 0; border-top:1px solid var(--line-light); }
