@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://erikawild.be/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://erikawild.be/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://erikawild.be/nl.html"/>
+  </url>
+  <url>
+    <loc>https://erikawild.be/nl.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://erikawild.be/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://erikawild.be/nl.html"/>
+  </url>
+  <url>
+    <loc>https://erikawild.be/contact.html</loc>
+  </url>
+</urlset>

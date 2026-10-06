@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<title>Contact — Erika Wild</title>
+<meta name="description" content="Écris à Erika Wild pour recevoir les dates de l'expérience 01 ou poser une question. Schrijf Erika Wild voor de data van experiment 01 of een vraag.">
+<link rel="canonical" href="https://erikawild.be/contact.html">
+<meta property="og:title" content="Contact — Erika Wild">
+<meta property="og:description" content="Écris à Erika Wild pour recevoir les dates de l'expérience 01 ou poser une question. Schrijf Erika Wild voor de data van experiment 01 of een vraag.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://erikawild.be/contact.html">
+<meta property="og:image" content="https://erikawild.be/img/og-erikawild.jpg">
+<link rel="icon" href="img/logo-erikawild.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="nav">
+    <a href="index.html" class="brand"><img src="img/logo-erikawild.svg" width="22" height="58" alt="" class="brand-mark"><span class="brand-name">Erika Wild</span><span class="sr-only"> — accueil</span></a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-links">
+        <li class="hide-sm"><a href="index.html#experience">Expérience 01</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li class="sep" aria-hidden="true"></li>
+        <li><a href="index.html" lang="fr" hreflang="fr"><span aria-hidden="true">FR</span><span class="sr-only">Français</span></a></li>
+        <li><a href="nl.html" lang="nl" hreflang="nl"><span aria-hidden="true">NL</span><span class="sr-only">Nederlands</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section-black">
+    <div class="wrap">
+      <p class="band-label">Contact</p>
+      <div class="contact-grid">
+        <div>
+          <p class="lang-tag">FR</p>
+          <h1>Écris-moi</h1>
+          <p>Pour les dates de l'expérience 01, ou une question d'abord. Je te réponds moi-même.</p>
+        </div>
+        <div lang="nl">
+          <p class="lang-tag">NL</p>
+          <h2>Schrijf me</h2>
+          <p>Voor de data van experiment 01, of eerst een vraag. Ik antwoord je zelf.</p>
+        </div>
+      </div>
+
+      <!-- Formulier via Formspree: vervang FORMSPREE_ID door de ID van een apart erikawild.be-formulier en test 1x na deploy. -->
+      <form action="https://formspree.io/f/FORMSPREE_ID" method="POST" class="contact-form">
+        <input type="hidden" name="_subject" value="Nouveau message via erikawild.be">
+        <p class="honeypot" aria-hidden="true"><label>Ne pas remplir&nbsp;: <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+        <div>
+          <label for="name">Prénom <span lang="nl">/ Voornaam</span></label>
+          <input type="text" id="name" name="name" autocomplete="given-name" required>
+        </div>
+        <div>
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required>
+        </div>
+        <div>
+          <label for="message">Message <span lang="nl">/ Bericht</span></label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer<span lang="nl">&nbsp;/ Versturen</span></button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="img/logo-erikawild.svg" width="13" height="34" alt="" loading="lazy"><span>© 2026 Erika Wild · Expériences sensorielles, les yeux bandés.</span></div>
+    <nav aria-label="Plan du site">
+      <ul class="footer-links">
+        <li><a href="index.html#experience">Expérience 01 — Sans la vue</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" lang="fr" hreflang="fr">Français</a></li>
+        <li><a href="nl.html" lang="nl" hreflang="nl">Nederlands</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
