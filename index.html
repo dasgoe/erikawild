@@ -15,7 +15,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://erikawild.be/">
 <meta property="og:image" content="https://erikawild.be/img/og-erikawild.jpg">
-<link rel="icon" href="img/logo-erikawild.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -23,10 +23,13 @@
   "@type": "Organization",
   "name": "Erika Wild",
   "url": "https://erikawild.be/",
-  "logo": "https://erikawild.be/img/logo-erikawild.svg",
   "image": "https://erikawild.be/img/og-erikawild.jpg",
   "description": "Erika Wild propose des expériences sensorielles les yeux bandés, en nature, avec la danse, la musique et le rythme. Chaque expérience explore une seule question. L'expérience 01 a pour thème : sans la vue.",
-  "knowsLanguage": ["fr", "nl"]
+  "knowsLanguage": ["fr", "nl"],
+  "makesOffer": [
+    {"@type": "Offer", "name": "Séance individuelle (1 h)", "price": "75", "priceCurrency": "EUR", "url": "https://cal.com/CAL_ID"},
+    {"@type": "Offer", "name": "Séance en groupe (2 h)", "price": "35", "priceCurrency": "EUR", "url": "https://cal.com/CAL_ID"}
+  ]
 }
 </script>
 </head>
@@ -35,11 +38,12 @@
 
 <header class="site-header">
   <div class="nav">
-    <a href="index.html" class="brand"><img src="img/logo-erikawild.svg" width="22" height="58" alt="" class="brand-mark"><span class="brand-name">Erika Wild</span><span class="sr-only"> — accueil</span></a>
+    <a href="index.html" class="brand"><span class="brand-name">Erika Wild</span><span class="sr-only"> — accueil</span></a>
     <nav aria-label="Navigation principale">
       <ul class="nav-links">
         <li class="hide-sm"><a href="index.html#experience">Expérience 01</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="hide-sm"><a href="contact.html">Contact</a></li>
+        <li class="nav-book"><a href="https://cal.com/CAL_ID">Réserver</a></li>
         <li class="sep" aria-hidden="true"></li>
         <li><a href="index.html" lang="fr" hreflang="fr" aria-current="page"><span aria-hidden="true">FR</span><span class="sr-only">Français</span></a></li>
         <li><a href="nl.html" lang="nl" hreflang="nl"><span aria-hidden="true">NL</span><span class="sr-only">Nederlands</span></a></li>
@@ -52,30 +56,30 @@
 
   <section class="hero">
     <div class="hero-grid">
-      <img src="img/erikawild-bandeau-720.webp"
+      <div class="hero-media"><img src="img/erikawild-bandeau-720.webp"
            srcset="img/erikawild-bandeau-480.webp 480w, img/erikawild-bandeau-720.webp 720w, img/erikawild-bandeau-1080.webp 1080w"
            sizes="(min-width: 860px) 50vw, 100vw"
            width="1080" height="1350" fetchpriority="high"
-           alt="Portrait en noir et blanc d'Erika Wild, les yeux bandés, debout dans les feuillages" class="hero-photo">
+           alt="Portrait en noir et blanc d'Erika Wild, les yeux bandés, debout dans les feuillages" class="hero-photo"></div>
       <div class="hero-text">
         <p class="band-label">Expérience 01 · sans la vue</p>
-        <h1>Que se passe-t-il si je te prive de <span class="veil">la vue</span>&nbsp;?</h1>
-        <p class="lede">Erika Wild t'emmène dans l'expérience. Les yeux bandés, en nature&nbsp;: tu marches, tu danses, tu écoutes.</p>
+        <h1>Que se <span class="nowrap">passe-t-il</span> si je te prive de <span class="veil">la vue</span>&nbsp;?</h1>
+        <p class="lede">Erika Wild t'emmène dans l'expérience. Les yeux bandés, en nature&nbsp;: tu marches, tu danses, tu écoutes. Seul·e ou en groupe.</p>
         <div class="btn-row">
-          <a href="contact.html" class="btn btn-primary">Je veux participer</a>
+          <a href="https://cal.com/CAL_ID" class="btn btn-primary">Réserver</a>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="ribbon" aria-hidden="true"><div class="ribbon-track"><span>Expérience 01 — sans la vue — ferme les yeux — Expérience 01 — sans la vue — ferme les yeux — Expérience 01 — sans la vue — ferme les yeux — Expérience 01 — sans la vue — ferme les yeux — </span><span>Expérience 01 — sans la vue — ferme les yeux — Expérience 01 — sans la vue — ferme les yeux — Expérience 01 — sans la vue — ferme les yeux — Expérience 01 — sans la vue — ferme les yeux — </span></div></div>
+  <div class="ribbon" aria-hidden="true"><div class="ribbon-track"><span>Expérience 01&nbsp;: ferme les yeux — Expérience 01&nbsp;: ferme les yeux — Expérience 01&nbsp;: ferme les yeux — Expérience 01&nbsp;: ferme les yeux — Expérience 01&nbsp;: ferme les yeux — Expérience 01&nbsp;: ferme les yeux — </span><span>Expérience 01&nbsp;: ferme les yeux — Expérience 01&nbsp;: ferme les yeux — Expérience 01&nbsp;: ferme les yeux — Expérience 01&nbsp;: ferme les yeux — Expérience 01&nbsp;: ferme les yeux — Expérience 01&nbsp;: ferme les yeux — </span></div></div>
 
   <section class="section-black">
     <div class="wrap">
       <h2>Le regard prend toute la place</h2>
       <p class="big-line">Tout passe par les yeux. Toute la journée.</p>
       <p>Je t'enlève la vue. Le reste se réveille&nbsp;: le sol sous tes pieds, le vent sur ta peau, la voix de l'autre, ton souffle.</p>
-      <p class="fact">Erika Wild propose des expériences sensorielles les yeux bandés, en nature, avec la danse, la musique et le rythme.</p>
+      <p class="fact">Erika Wild propose des expériences sensorielles les yeux bandés, en nature, avec la danse, la musique et le rythme. Séance individuelle&nbsp;: 75&nbsp;€ (1&nbsp;h). Séance en groupe&nbsp;: 35&nbsp;€ (2&nbsp;h).</p>
     </div>
   </section>
 
@@ -120,7 +124,7 @@
         <li>Aucune expérience en danse ou en musique.</li>
         <li>Tu peux retirer le bandeau à tout moment.</li>
         <li>Je te guide. Tu n'es jamais seul·e dans le noir.</li>
-        <li>Dates et lieux sur simple demande.</li>
+        <li>Tu choisis ton moment dans l'agenda en ligne.</li>
       </ul>
     </div>
   </section>
@@ -129,10 +133,14 @@
     <div class="wrap">
       <hr class="band-rule">
       <h2>L'expérience 01 commence.</h2>
-      <p>Tu veux les dates, ou une question d'abord&nbsp;? Écris-moi.</p>
+      <ul class="offers">
+        <li><span><span class="offer-name">Séance individuelle</span><span class="offer-meta">1 heure, toi et moi</span></span><span class="offer-price">75&nbsp;€</span></li>
+        <li><span><span class="offer-name">Séance en groupe</span><span class="offer-meta">2 heures</span></span><span class="offer-price">35&nbsp;€</span></li>
+      </ul>
       <div class="btn-row">
-        <a href="contact.html" class="btn btn-primary">Je veux participer</a>
+        <a href="https://cal.com/CAL_ID" class="btn btn-primary">Réserver</a>
       </div>
+      <p class="note">Une question d'abord&nbsp;? <a href="contact.html">Écris-moi</a>.</p>
     </div>
   </section>
 
@@ -140,10 +148,11 @@
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-brand"><img src="img/logo-erikawild.svg" width="13" height="34" alt="" loading="lazy"><span>© 2026 Erika Wild · Expériences sensorielles, les yeux bandés.</span></div>
+    <div class="footer-brand"><strong>Erika Wild</strong><span>© 2026 Erika Wild · Expériences sensorielles, les yeux bandés.</span></div>
     <nav aria-label="Plan du site">
       <ul class="footer-links">
         <li><a href="index.html#experience">Expérience 01 — Sans la vue</a></li>
+        <li><a href="https://cal.com/CAL_ID">Réserver</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="index.html" lang="fr" hreflang="fr">Français</a></li>
         <li><a href="nl.html" lang="nl" hreflang="nl">Nederlands</a></li>

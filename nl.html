@@ -15,7 +15,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://erikawild.be/nl.html">
 <meta property="og:image" content="https://erikawild.be/img/og-erikawild.jpg">
-<link rel="icon" href="img/logo-erikawild.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -23,10 +23,13 @@
   "@type": "Organization",
   "name": "Erika Wild",
   "url": "https://erikawild.be/",
-  "logo": "https://erikawild.be/img/logo-erikawild.svg",
   "image": "https://erikawild.be/img/og-erikawild.jpg",
   "description": "Erika Wild organiseert zintuiglijke experimenten met een blinddoek, in de natuur, met dans, muziek en ritme. Elk experiment onderzoekt één vraag. Experiment 01 heeft als thema: zonder zicht.",
-  "knowsLanguage": ["fr", "nl"]
+  "knowsLanguage": ["fr", "nl"],
+  "makesOffer": [
+    {"@type": "Offer", "name": "Individuele sessie (1 u)", "price": "75", "priceCurrency": "EUR", "url": "https://cal.com/CAL_ID"},
+    {"@type": "Offer", "name": "Groepssessie (2 u)", "price": "35", "priceCurrency": "EUR", "url": "https://cal.com/CAL_ID"}
+  ]
 }
 </script>
 </head>
@@ -35,11 +38,12 @@
 
 <header class="site-header">
   <div class="nav">
-    <a href="nl.html" class="brand"><img src="img/logo-erikawild.svg" width="22" height="58" alt="" class="brand-mark"><span class="brand-name">Erika Wild</span><span class="sr-only"> — home</span></a>
+    <a href="nl.html" class="brand"><span class="brand-name">Erika Wild</span><span class="sr-only"> — home</span></a>
     <nav aria-label="Hoofdnavigatie">
       <ul class="nav-links">
         <li class="hide-sm"><a href="nl.html#experiment">Experiment 01</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="hide-sm"><a href="contact.html">Contact</a></li>
+        <li class="nav-book"><a href="https://cal.com/CAL_ID">Boeken</a></li>
         <li class="sep" aria-hidden="true"></li>
         <li><a href="index.html" lang="fr" hreflang="fr"><span aria-hidden="true">FR</span><span class="sr-only">Français</span></a></li>
         <li><a href="nl.html" lang="nl" hreflang="nl" aria-current="page"><span aria-hidden="true">NL</span><span class="sr-only">Nederlands</span></a></li>
@@ -52,30 +56,30 @@
 
   <section class="hero">
     <div class="hero-grid">
-      <img src="img/erikawild-bandeau-720.webp"
+      <div class="hero-media"><img src="img/erikawild-bandeau-720.webp"
            srcset="img/erikawild-bandeau-480.webp 480w, img/erikawild-bandeau-720.webp 720w, img/erikawild-bandeau-1080.webp 1080w"
            sizes="(min-width: 860px) 50vw, 100vw"
            width="1080" height="1350" fetchpriority="high"
-           alt="Zwart-witportret van Erika Wild, geblinddoekt, tussen de bladeren" class="hero-photo">
+           alt="Zwart-witportret van Erika Wild, geblinddoekt, tussen de bladeren" class="hero-photo"></div>
       <div class="hero-text">
         <p class="band-label">Experiment 01 · zonder zicht</p>
         <h1>Wat gebeurt er als ik je <span class="veil">het zicht</span> ontneem?</h1>
-        <p class="lede">Erika Wild neemt je mee in de ervaring. Geblinddoekt, in de natuur: je wandelt, je danst, je luistert.</p>
+        <p class="lede">Erika Wild neemt je mee in de ervaring. Geblinddoekt, in de natuur: je wandelt, je danst, je luistert. Alleen of in groep.</p>
         <div class="btn-row">
-          <a href="contact.html" class="btn btn-primary">Ik wil meedoen</a>
+          <a href="https://cal.com/CAL_ID" class="btn btn-primary">Boek nu</a>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="ribbon" aria-hidden="true"><div class="ribbon-track"><span>Experiment 01 — zonder zicht — sluit je ogen — Experiment 01 — zonder zicht — sluit je ogen — Experiment 01 — zonder zicht — sluit je ogen — Experiment 01 — zonder zicht — sluit je ogen — </span><span>Experiment 01 — zonder zicht — sluit je ogen — Experiment 01 — zonder zicht — sluit je ogen — Experiment 01 — zonder zicht — sluit je ogen — Experiment 01 — zonder zicht — sluit je ogen — </span></div></div>
+  <div class="ribbon" aria-hidden="true"><div class="ribbon-track"><span>Experiment 01: sluit je ogen — Experiment 01: sluit je ogen — Experiment 01: sluit je ogen — Experiment 01: sluit je ogen — Experiment 01: sluit je ogen — Experiment 01: sluit je ogen — </span><span>Experiment 01: sluit je ogen — Experiment 01: sluit je ogen — Experiment 01: sluit je ogen — Experiment 01: sluit je ogen — Experiment 01: sluit je ogen — Experiment 01: sluit je ogen — </span></div></div>
 
   <section class="section-black">
     <div class="wrap">
       <h2>Je ogen nemen alle plaats in</h2>
       <p class="big-line">Alles gaat via je ogen. De hele dag.</p>
       <p>Ik neem je het zicht af. De rest wordt wakker: de grond onder je voeten, de wind op je huid, de stem van de ander, je adem.</p>
-      <p class="fact">Erika Wild organiseert zintuiglijke experimenten met een blinddoek, in de natuur, met dans, muziek en ritme.</p>
+      <p class="fact">Erika Wild organiseert zintuiglijke experimenten met een blinddoek, in de natuur, met dans, muziek en ritme. Individuele sessie: € 75 (1 uur). Groepssessie: € 35 (2 uur).</p>
     </div>
   </section>
 
@@ -120,7 +124,7 @@
         <li>Geen ervaring in dans of muziek nodig.</li>
         <li>Je kunt de blinddoek op elk moment afdoen.</li>
         <li>Ik begeleid je. Je staat nooit alleen in het donker.</li>
-        <li>Data en plaatsen op eenvoudige vraag.</li>
+        <li>Je kiest zelf je moment in de online agenda.</li>
       </ul>
     </div>
   </section>
@@ -129,10 +133,14 @@
     <div class="wrap">
       <hr class="band-rule">
       <h2>Experiment 01 begint.</h2>
-      <p>Wil je de data, of eerst een vraag stellen? Schrijf me.</p>
+      <ul class="offers">
+        <li><span><span class="offer-name">Individuele sessie</span><span class="offer-meta">1 uur, jij en ik</span></span><span class="offer-price">€&nbsp;75</span></li>
+        <li><span><span class="offer-name">Groepssessie</span><span class="offer-meta">2 uur</span></span><span class="offer-price">€&nbsp;35</span></li>
+      </ul>
       <div class="btn-row">
-        <a href="contact.html" class="btn btn-primary">Ik wil meedoen</a>
+        <a href="https://cal.com/CAL_ID" class="btn btn-primary">Boek nu</a>
       </div>
+      <p class="note">Eerst een vraag? <a href="contact.html">Schrijf me</a>.</p>
     </div>
   </section>
 
@@ -140,10 +148,11 @@
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-brand"><img src="img/logo-erikawild.svg" width="13" height="34" alt="" loading="lazy"><span>© 2026 Erika Wild · Zintuiglijke experimenten, geblinddoekt.</span></div>
+    <div class="footer-brand"><strong>Erika Wild</strong><span>© 2026 Erika Wild · Zintuiglijke experimenten, geblinddoekt.</span></div>
     <nav aria-label="Sitemap">
       <ul class="footer-links">
         <li><a href="nl.html#experiment">Experiment 01 — Zonder zicht</a></li>
+        <li><a href="https://cal.com/CAL_ID">Boeken</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="index.html" lang="fr" hreflang="fr">Français</a></li>
         <li><a href="nl.html" lang="nl" hreflang="nl">Nederlands</a></li>
