@@ -123,7 +123,7 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 .ribbon{
   background:var(--ink); color:var(--black);
   transform:rotate(-2.5deg) scale(1.05);
-  margin-block:-1.5rem; position:relative; z-index:2;
+  margin-block:-1.5rem 3rem; position:relative; z-index:2;
   overflow:hidden; white-space:nowrap;
   padding-block:.7rem;
   font-family:var(--display); font-style:italic;
@@ -244,56 +244,55 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
   clip-path:polygon(0 2.5rem, 100% 0, 100% calc(100% - 2.5rem), 0 100%);
 }
 
-/* plaats */
-.place{ margin:2rem 0 0; color:var(--ink-soft); max-width:40ch; }
-
-/* wie ik ben: foto links, tekst rechts */
-.split-photo{ margin:0 auto; width:min(72%, 20rem); aspect-ratio:4/5; overflow:hidden; }
-.split-photo img{ display:block; width:100%; height:100%; object-fit:cover; }
+/* wie ik ben: zoals de hero, gespiegeld. Tekst links, foto rechts tot aan de rand */
+.me{ padding:0; display:grid; overflow:hidden; }
+.me-text{ width:var(--measure); margin:0 auto; padding-block:clamp(3rem, 7vw, 5rem); }
+.me-photo{ width:100%; height:78vw; max-height:560px; object-fit:cover; object-position:40% 25%;
+  clip-path:polygon(0 2.5rem, 100% 0, 100% 100%, 0 100%); order:-1; }
 @media (min-width:860px){
-  .split--me{ grid-template-columns:20rem 1fr; align-items:center; }
-  .split--me .split-photo{ width:100%; }
+  .me{ grid-template-columns:1fr 1fr; align-items:center; min-height:min(90vh, 720px); }
+  .me-text{ width:auto; margin:0; padding:4rem 4vw 4rem max(1rem, calc(50vw - 30rem)); }
+  .me-photo{ order:0; height:100%; max-height:none; min-height:560px; clip-path:polygon(7vw 0, 100% 0, 100% 100%, 0 100%); }
 }
 
-/* stemmen van deelnemers (licht vak) */
+/* stemmen van deelnemers */
 .voices{ display:grid; gap:1.75rem; margin-top:1.5rem; }
 @media (min-width:760px){ .voices{ grid-template-columns:1fr 1fr; gap:2rem 3rem; } }
 .voice{ margin:0; }
 .voice blockquote{ margin:0; font-family:var(--display); font-style:italic; font-size:var(--step-1); line-height:1.3; }
 .voice blockquote p{ margin:0; }
-.voice figcaption{ margin-top:.5rem; font-size:.8rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+.voice figcaption{ margin-top:.5rem; font-size:.8rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-soft); }
 .voice figcaption::before{ content:"— "; }
-.voices-cap{ margin:2rem 0 0; font-size:.85rem; }
-
-/* hoe het gaat: formules + faq */
-.formules{ margin:1.5rem 0 2rem; display:grid; gap:1.25rem; }
-@media (min-width:760px){ .formules{ grid-template-columns:1fr 1fr; gap:2rem; } }
-.formules dt{ font-family:var(--display); font-style:italic; font-size:var(--step-1); line-height:1.2; margin-bottom:.3rem; }
-.formules dd{ margin:0; color:var(--ink-soft); }
-.faq{ margin-top:2.5rem; border-top:1px solid var(--line); }
-.faq details{ border-bottom:1px solid var(--line); }
-.faq summary{
-  display:flex; align-items:center; justify-content:space-between; gap:1rem;
-  min-height:48px; padding:.6rem 0; cursor:pointer; list-style:none; font-weight:600;
-}
-.faq summary::-webkit-details-marker{ display:none; }
-.faq summary::after{ content:"+"; font-family:var(--display); font-size:1.5rem; line-height:1; }
-.faq details[open] summary::after{ content:"–"; }
-.faq details p{ margin:0 0 1rem; color:var(--ink-soft); max-width:60ch; }
-
-/* stemmen: brede foto bovenaan, zonder bovenmarge */
+.voices-cap{ margin:2rem 0 0; font-size:.85rem; color:var(--ink-soft); }
 .voices-section{ padding-top:0; }
 .voices-section .band-photo{ margin-bottom:clamp(3rem, 7vw, 5rem); }
 .voices-section .band-photo img{ clip-path:polygon(0 0, 100% 0, 100% calc(100% - 2.5rem), 0 100%); }
+
+/* praktisch */
+.prat{ margin:1.5rem 0 2rem; display:grid; gap:1rem; }
+@media (min-width:760px){ .prat{ grid-template-columns:repeat(3, 1fr); gap:2rem; } }
+.prat dt{ font-size:.75rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; margin-bottom:.2rem; }
+.prat dd{ margin:0; font-family:var(--display); font-style:italic; font-size:var(--step-1); line-height:1.25; }
+
+/* vragen */
+.faq{ margin-top:1.5rem; border-top:1px solid var(--line); }
+.faq details{ border-bottom:1px solid var(--line); }
+.faq summary{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  min-height:56px; padding:.8rem 0; cursor:pointer; list-style:none;
+  font-family:var(--display); font-style:italic; font-size:var(--step-1); line-height:1.2;
+}
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary::after{ content:"+"; font-size:1.6rem; line-height:1; }
+.faq details[open] summary::after{ content:"–"; }
+.faq details p{ margin:0 0 1.25rem; color:var(--ink-soft); max-width:60ch; }
+
 .split .quote{ font-size:var(--step-1); margin:1.5rem 0 0; }
 #formules .offer-meta{ max-width:46ch; opacity:1; }
 
-/* lichte vakken: tekst en lijnen omkeren */
-.section-light .list li{ border-color:var(--line-light); }
-.section-light .list li::before{ -webkit-text-stroke-color:var(--on-light); }
-.section-light .list p,
-.section-light .place,
-.section-light .voices-cap{ color:var(--on-light); }
+/* lichte vakken: alles donker, nooit lichte tekst op licht */
+.section-light .fact{ color:var(--on-light); border-left-color:var(--line-light); }
+.section-light .checks li{ border-color:var(--line-light); }
 
 /* formules + prijs */
 .offers{ list-style:none; margin:2rem 0 0; padding:0; }
