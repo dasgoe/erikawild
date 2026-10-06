@@ -220,7 +220,7 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 /* 1. film naast de tekst */
 .wrap--wide{ width:min(100% - 2rem, 60rem); }
 .split{ display:grid; gap:2rem; }
-.split-media{ margin:0; width:62%; justify-self:end; aspect-ratio:9/16; overflow:hidden; background:var(--black); }
+.split-media{ margin:0 auto; width:min(72%, 17rem); justify-self:center; aspect-ratio:9/16; overflow:hidden; background:var(--black); }
 .split-media video{ display:block; width:100%; height:100%; object-fit:cover; }
 @media (min-width:860px){
   .split{ grid-template-columns:1fr 17rem; gap:4rem; align-items:start; }
