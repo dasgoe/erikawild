@@ -7,6 +7,8 @@ index.html / nl.html                       → one-pager FR / NL
 bon-cadeau.html / cadeaubon.html           → cadeaubon FR / NL
 conditions.html / voorwaarden.html         → wettelijke vermeldingen + verkoopsvoorwaarden FR / NL
 confidentialite.html / privacy.html        → privacy & cookies FR / NL
+404.html                                   → tweetalige foutpagina
+_headers                                   → Netlify: beveiligingsheaders + caching
 css/style.css, img/, site.webmanifest, robots.txt, sitemap.xml (hreflang voor alle 8 pagina's)
 ```
 

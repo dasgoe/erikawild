@@ -69,7 +69,10 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 
 /* ---------- toegankelijkheid ---------- */
 .skip-link{ position:absolute; left:-999px; background:var(--ink); color:var(--black); padding:.75rem 1rem; z-index:1000; }
-.skip-link:focus{ left:1rem; top:1rem; }
+.skip-link:focus{ left:1rem; top:1rem; outline:3px solid var(--ink); outline-offset:3px; }
+video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
+.section-light video:focus-within{ outline-color:var(--on-light); }
+.legal a{ display:inline-flex; align-items:center; min-height:44px; }
 :focus-visible{ outline:3px solid var(--ink); outline-offset:3px; }
 .section-light :focus-visible{ outline-color:var(--on-light); }
 .nowrap{ white-space:nowrap; }
@@ -189,27 +192,10 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 
 /* ---------- tekst ---------- */
 .big-line{ font-family:var(--display); font-style:italic; font-size:var(--step-1); line-height:1.35; }
-.fact{ font-size:.9rem; color:var(--ink-soft); border-left:1px solid var(--line); padding-left:1rem; margin-top:2.5rem; }
 .quote{
   font-family:var(--display); font-style:italic;
   font-size:var(--step-2); line-height:1.05; margin:2.5rem 0 0;
 }
-
-.list{ list-style:none; margin:2.5rem 0 0; padding:0; counter-reset:item; }
-.list li{
-  display:grid; grid-template-columns:clamp(4rem, 10vw, 7rem) 1fr; gap:1rem; align-items:start;
-  padding:1.5rem 0; border-top:1px solid var(--line);
-  counter-increment:item;
-}
-.list li:last-child{ border-bottom:1px solid var(--line); }
-.list li::before{
-  content:counter(item, decimal-leading-zero);
-  font-family:var(--display); font-style:italic;
-  font-size:clamp(2.6rem, 2rem + 3vw, 4.5rem); line-height:.9;
-  color:transparent; -webkit-text-stroke:1px var(--ink);
-}
-.list strong{ display:block; font-family:var(--display); font-style:italic; font-weight:400; font-size:var(--step-1); line-height:1.2; margin-bottom:.3rem; }
-.list p{ margin:0; color:var(--ink-soft); }
 
 .checks{ list-style:none; margin:1.5rem 0 0; padding:0; }
 .checks li{ position:relative; padding:.8rem 0 .8rem 2.2rem; border-top:1px solid var(--line); }
@@ -287,7 +273,6 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 #formules .offer-meta{ max-width:46ch; opacity:1; }
 
 /* lichte vakken: alles donker, nooit lichte tekst op licht */
-.section-light .fact{ color:var(--on-light); border-left-color:var(--line-light); }
 .section-light .checks li{ border-color:var(--line-light); }
 
 /* experiment 01: één activiteit + wat nog komt */
@@ -301,8 +286,6 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 /* feitenzin voor zoekmachines, discreet in de footer */
 .footer-fact{ flex-basis:100%; margin:0; font-size:.78rem; max-width:70ch; }
 
-/* klein raster onder de reacties: zelfde vierkant als bij Experiment 01 */
-.act-grid--voices{ margin-top:3rem; }
 
 /* veiligheid: uitgelicht, geen lijstpunt */
 .safe{ margin:2rem 0 0; padding:1.1rem 1.25rem; background:var(--on-light); color:var(--light); font-weight:600; max-width:40rem; transform:rotate(-1deg); }
@@ -350,12 +333,8 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 /* schuine foto's naast tekst */
 .tilt-photo{ margin:0 auto; width:min(64%, 17rem); aspect-ratio:3/4; overflow:hidden; }
 .tilt-photo img{ display:block; width:100%; height:100%; object-fit:cover; }
-.tilt-left{ transform:rotate(-2.5deg); }
 .tilt-right{ transform:rotate(2.5deg); }
-.walk-split{ display:grid; gap:2.5rem; margin-top:2.5rem; }
-.walk-split .walk{ margin:0; }
 @media (min-width:860px){
-  .walk-split{ grid-template-columns:1fr 15rem; gap:3rem; align-items:center; }
   .tilt-photo{ width:100%; }
   .split .tilt-photo{ margin-top:3rem; }
 }
@@ -397,18 +376,6 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 .note{ margin:1.25rem 0 0; font-size:.9rem; }
 .note a{ text-underline-offset:3px; }
 .offer-price{ font-family:var(--display); font-style:italic; font-size:var(--step-1); line-height:1; white-space:nowrap; }
-
-/* ---------- contact ---------- */
-.contact-form{ display:grid; gap:1.2rem; margin-top:2.5rem; }
-.contact-form label{ display:block; font-size:.75rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; margin-bottom:.4rem; }
-.contact-form input, .contact-form textarea{
-  width:100%; font:inherit; padding:.8rem 0;
-  border:0; border-bottom:1px solid var(--ink-soft); border-radius:0;
-  background:transparent; color:var(--ink);
-}
-.contact-form textarea{ min-height:150px; resize:vertical; }
-.contact-form button{ justify-self:start; }
-.honeypot{ display:none; }
 
 /* ---------- footer ---------- */
 .site-footer{ border-top:1px solid var(--line); padding-block:2.5rem; font-size:.85rem; color:var(--ink-soft); }
