@@ -3,13 +3,11 @@
 Statische site, 3 pagina's, pure HTML/CSS. Geen JavaScript, geen cookies, geen externe lettertypes.
 
 ```
-index.html     → one-pager FR (Expérience 01 · sans la vue)
-nl.html        → one-pager NL (Experiment 01 · zonder zicht)
-contact.html   → contactformulier FR (Formspree)
-contact-nl.html → contactformulier NL (zelfde Formspree-formulier, veld `langue`)
-css/style.css  → design tokens + componenten
-img/           → favicon (svg), portret (webp 480/720/1080), og-afbeelding, strook ew-*.webp + film ew-film-480.mp4 (warm zwart-wit, eigen trommelmuziek, start enkel op klik)
-robots.txt / sitemap.xml (met hreflang FR/NL)
+index.html / nl.html                       → one-pager FR / NL
+bon-cadeau.html / cadeaubon.html           → cadeaubon FR / NL
+conditions.html / voorwaarden.html         → wettelijke vermeldingen + verkoopsvoorwaarden FR / NL
+confidentialite.html / privacy.html        → privacy & cookies FR / NL
+css/style.css, img/, site.webmanifest, robots.txt, sitemap.xml (hreflang voor alle 8 pagina's)
 ```
 
 ## Stijl (v3 — zwart-wit, maar warm)
@@ -44,8 +42,9 @@ hero (vraag) → lint (gedicht) → kernzin + film → [licht] één experiment 
 | #120E0C op #F2EFE9 (lichte vakken, labels) | 16,73:1 | AAA |
 
 ## Vóór livegang
-1. `CAL_ID` vervangen door de echte Cal-link (alle bestanden: zoek op `CAL_ID`) en 1x testboeken.
-2. `FORMSPREE_ID` in `contact.html` en `contact-nl.html` vervangen door de ID van een apart erikawild.be-formulier, en 1x testen.
-3. Mentions légales: naam, adres en KBO-nummer van de aanbieder (vzw of eenmanszaak?).
-4. Nakijken of deze beloftes kloppen: "aucune expérience en danse ou en musique", "tu peux retirer le bandeau à tout moment", "tu choisis ton moment dans l'agenda en ligne".
-5. Aparte GitHub-repo en Netlify-site voor erikawild.be.
+1. Cal-links invullen: zoek `CAL_ID` (afspraaktypes /individueel, /koppel, /groep, /intake).
+2. WhatsApp-link invullen: zoek `WHATSAPP_ID`.
+3. In conditions/voorwaarden en confidentialite/privacy: alle gemarkeerde [VELDEN] invullen (naam, adres, KBO, btw-statuut, e-mail, verzekeraar).
+4. Voorwaarden ook in Cal tonen vóór betaling.
+5. Toestemming voor foto's en citaten.
+6. Aparte GitHub-repo + Netlify-site.

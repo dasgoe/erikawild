@@ -13,15 +13,39 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://erikawild.be/"/>
   </url>
   <url>
-    <loc>https://erikawild.be/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://erikawild.be/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://erikawild.be/contact-nl.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://erikawild.be/contact.html"/>
+    <loc>https://erikawild.be/bon-cadeau.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://erikawild.be/bon-cadeau.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://erikawild.be/cadeaubon.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erikawild.be/bon-cadeau.html"/>
   </url>
   <url>
-    <loc>https://erikawild.be/contact-nl.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://erikawild.be/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://erikawild.be/contact-nl.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://erikawild.be/contact.html"/>
+    <loc>https://erikawild.be/cadeaubon.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://erikawild.be/bon-cadeau.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://erikawild.be/cadeaubon.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erikawild.be/bon-cadeau.html"/>
+  </url>
+  <url>
+    <loc>https://erikawild.be/conditions.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://erikawild.be/conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://erikawild.be/voorwaarden.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erikawild.be/conditions.html"/>
+  </url>
+  <url>
+    <loc>https://erikawild.be/voorwaarden.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://erikawild.be/conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://erikawild.be/voorwaarden.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erikawild.be/conditions.html"/>
+  </url>
+  <url>
+    <loc>https://erikawild.be/confidentialite.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://erikawild.be/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://erikawild.be/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erikawild.be/confidentialite.html"/>
+  </url>
+  <url>
+    <loc>https://erikawild.be/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://erikawild.be/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://erikawild.be/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://erikawild.be/confidentialite.html"/>
   </url>
 </urlset>

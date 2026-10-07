@@ -220,11 +220,8 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 /* 1. film naast de tekst */
 .wrap--wide{ width:min(100% - 2rem, 60rem); }
 .split{ display:grid; gap:2rem; }
-.split-media{ margin:0 auto; width:min(72%, 17rem); justify-self:center; aspect-ratio:9/16; overflow:hidden; background:var(--black); }
-.split-media video{ display:block; width:100%; height:100%; object-fit:cover; }
 @media (min-width:860px){
   .split{ grid-template-columns:1fr 17rem; gap:4rem; align-items:start; }
-  .split-media{ width:100%; margin-top:5rem; }
 }
 /* 2. beelden onder de activiteiten: samen één vierkant, zonder kaders.
    3 foto's: 1 groot links, 2 gestapeld rechts. 4 foto's: .act-grid--4 = 2×2 */
@@ -317,6 +314,58 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 .band-bottom{ margin:clamp(3rem, 7vw, 5rem) 0 0; }
 .band-bottom img{ display:block; width:100%; height:clamp(220px, 40vw, 560px); object-fit:cover; object-position:50% 30%;
   clip-path:polygon(0 0, 100% 3rem, 100% 100%, 0 100%); }
+
+/* conversie: noot onder de heroknop */
+.hero-note{ margin:.75rem 0 0; font-size:.85rem; color:var(--ink-soft); }
+/* hoe het gaat: foto links, tekst rechts */
+.how{ display:grid; gap:2rem; }
+.how-photo{ margin:0; width:min(70%, 18rem); aspect-ratio:3/4; overflow:hidden; transform:rotate(-2deg); justify-self:center; }
+.how-photo img{ display:block; width:100%; height:100%; object-fit:cover; }
+@media (min-width:860px){
+  .how{ grid-template-columns:18rem 1fr; gap:4rem; align-items:center; }
+  .how-photo{ width:100%; }
+}
+/* formules: per formule een eigen knop */
+.offers li{ align-items:center; gap:.75rem 1.5rem; }
+.offer-text{ flex:1 1 20rem; }
+.offer-act{ display:flex; align-items:center; gap:1rem; }
+.btn-sm{ min-height:44px; padding:.6rem 1.2rem; font-size:.78rem; }
+.intake{ display:flex; flex-wrap:wrap; align-items:center; gap:.75rem 1.5rem; margin-top:2rem; padding:1rem 0; }
+.intake p{ margin:0; flex:1 1 20rem; }
+/* subpagina's */
+.page h1{ font-size:var(--step-2); }
+.page h2{ font-size:var(--step-1); margin-top:2.5rem; }
+.page h3{ font-family:var(--sans); font-style:normal; font-weight:700; font-size:1rem; margin:1.5rem 0 .3rem; }
+.page a{ text-underline-offset:3px; }
+.offers--dark li{ border-color:var(--line); }
+.steps{ padding-left:1.25rem; }
+.steps li{ margin-bottom:.6rem; }
+.plain{ padding-left:1.1rem; }
+.plain li{ margin-bottom:.5rem; }
+.small{ font-size:.85rem; color:var(--ink-soft); margin-top:2rem; }
+.legal{ display:grid; gap:.6rem; margin:1rem 0 0; }
+.legal div{ display:grid; grid-template-columns:minmax(9rem, 14rem) 1fr; gap:1rem; border-top:1px solid var(--line); padding-top:.6rem; }
+.legal dt{ color:var(--ink-soft); font-size:.85rem; }
+.legal dd{ margin:0; }
+.todo{ background:var(--ink); color:var(--black); padding:0 .3em; }
+@media (max-width:520px){ .legal div{ grid-template-columns:1fr; gap:.1rem; } }
+
+/* schuine foto's naast tekst */
+.tilt-photo{ margin:0 auto; width:min(64%, 17rem); aspect-ratio:3/4; overflow:hidden; }
+.tilt-photo img{ display:block; width:100%; height:100%; object-fit:cover; }
+.tilt-left{ transform:rotate(-2.5deg); }
+.tilt-right{ transform:rotate(2.5deg); }
+.walk-split{ display:grid; gap:2.5rem; margin-top:2.5rem; }
+.walk-split .walk{ margin:0; }
+@media (min-width:860px){
+  .walk-split{ grid-template-columns:1fr 15rem; gap:3rem; align-items:center; }
+  .tilt-photo{ width:100%; }
+  .split .tilt-photo{ margin-top:3rem; }
+}
+.next-p{ margin:.25rem 0 0; color:var(--ink-soft); max-width:46ch; }
+.act-grid video{ display:block; width:100%; height:100%; object-fit:cover; }
+.me-cred{ font-size:.85rem; letter-spacing:.02em; margin-top:1.5rem; }
+.offer-meta a{ color:inherit; text-underline-offset:3px; }
 
 /* formules + prijs */
 .offers{ list-style:none; margin:2rem 0 0; padding:0; }
