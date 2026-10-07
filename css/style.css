@@ -293,6 +293,17 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 .section-light .fact{ color:var(--on-light); border-left-color:var(--line-light); }
 .section-light .checks li{ border-color:var(--line-light); }
 
+/* experiment 01: één activiteit + wat nog komt */
+.walk{ margin:2.5rem 0 0; padding:1.5rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.walk h3{ font-size:var(--step-1); margin:0 0 .4rem; }
+.walk p{ margin:0; color:var(--ink-soft); }
+.next{ margin:1.5rem 0 0; font-family:var(--display); font-style:italic; font-size:var(--step-1); color:var(--ink-soft); }
+/* tweede knop (WhatsApp) op licht */
+.btn-ghost{ background:transparent; color:var(--on-light); border-color:var(--on-light); }
+.btn-ghost:hover{ background:var(--on-light); color:var(--light); }
+/* feitenzin voor zoekmachines, discreet in de footer */
+.footer-fact{ flex-basis:100%; margin:0; font-size:.78rem; max-width:70ch; }
+
 /* formules + prijs */
 .offers{ list-style:none; margin:2rem 0 0; padding:0; }
 .offers li{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.25rem 1rem; padding:1rem 0; border-top:1px solid var(--line-light); }
