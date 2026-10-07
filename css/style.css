@@ -367,6 +367,29 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 .gift-body{ border-top:0; }
 .me h1{ font-size:var(--step-2); }
 
+/* reacties: horizontaal schuiven (swipen / scrollen), geen JavaScript */
+.voices--scroll{
+  display:flex; grid-template-columns:none; gap:1.25rem; overflow-x:auto; scroll-snap-type:x mandatory;
+  padding:0 0 1rem; margin-right:calc(-1 * (100vw - 100%) / 2); padding-right:1rem;
+  scrollbar-width:thin; scrollbar-color:var(--ink-soft) transparent;
+}
+.voices--scroll .voice{ flex:0 0 min(80%, 22rem); scroll-snap-align:start; padding:1.25rem; border:1px solid var(--line); }
+.voices--scroll .voice blockquote{ font-size:1.15rem; }
+.voices--scroll:focus-visible{ outline-offset:6px; }
+/* wat nog komt: na het prijsblok */
+.next-section .next{ color:var(--ink); font-size:var(--step-2); margin-top:0; }
+.next-section .next-p{ color:var(--ink-soft); }
+
+/* kleuren per achtergrond (na herschikking) */
+.section-black .offers li{ border-color:var(--line); }
+.section-black .btn-ghost{ color:var(--ink); border-color:var(--ink); }
+.section-black .btn-ghost:hover{ background:var(--ink); color:var(--black); }
+.section-light .voices--scroll .voice{ border-color:var(--line-light); }
+.section-light .voices--scroll{ scrollbar-color:var(--on-light) transparent; }
+.section-light .faq, .section-light .faq details{ border-color:var(--line-light); }
+.section-light .faq details p{ color:var(--on-light); }
+.section-black .band-bottom{ margin-top:clamp(3rem, 7vw, 5rem); }
+
 /* formules + prijs */
 .offers{ list-style:none; margin:2rem 0 0; padding:0; }
 .offers li{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.25rem 1rem; padding:1rem 0; border-top:1px solid var(--line-light); }
