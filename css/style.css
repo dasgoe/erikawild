@@ -247,12 +247,12 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 /* wie ik ben: zoals de hero, gespiegeld. Tekst links, foto rechts tot aan de rand */
 .me{ padding:0; display:grid; overflow:hidden; }
 .me-text{ width:var(--measure); margin:0 auto; padding-block:clamp(3rem, 7vw, 5rem); }
-.me-photo{ width:100%; height:100vw; max-height:620px; object-fit:cover; object-position:40% 0%;
+.me-photo{ display:block; width:100%; height:100vw; max-height:620px; object-fit:cover; object-position:40% 0%;
   clip-path:polygon(0 2.5rem, 100% 0, 100% 100%, 0 100%); order:-1; }
 @media (min-width:860px){
   .me{ grid-template-columns:1fr 1fr; align-items:center; min-height:min(90vh, 720px); }
   .me-text{ width:auto; margin:0; padding:4rem 4vw 4rem max(1rem, calc(50vw - 30rem)); }
-  .me-photo{ order:0; height:100%; max-height:none; min-height:560px; clip-path:polygon(7vw 0, 100% 0, 100% 100%, 0 100%); }
+  .me-photo{ order:0; align-self:stretch; height:100%; max-height:none; min-height:560px; clip-path:polygon(7vw 0, 100% 0, 100% 100%, 0 100%); }
 }
 
 /* stemmen van deelnemers */
@@ -306,6 +306,17 @@ section{ padding-block:clamp(4rem, 9vw, 8rem); }
 
 /* klein raster onder de reacties: zelfde vierkant als bij Experiment 01 */
 .act-grid--voices{ margin-top:3rem; }
+
+/* veiligheid: uitgelicht, geen lijstpunt */
+.safe{ margin:2rem 0 0; padding:1.1rem 1.25rem; background:var(--on-light); color:var(--light); font-weight:600; max-width:40rem; transform:rotate(-1deg); }
+/* wat nog komt: titel boven de teaserfoto's */
+.next{ margin:3rem 0 0; }
+.next + .act-grid{ margin-top:1rem; }
+/* groepsfoto als rechte band onderaan het boekvak: schuin bovenaan, links hoger */
+#formules{ padding-bottom:0; }
+.band-bottom{ margin:clamp(3rem, 7vw, 5rem) 0 0; }
+.band-bottom img{ display:block; width:100%; height:clamp(220px, 40vw, 560px); object-fit:cover; object-position:50% 30%;
+  clip-path:polygon(0 0, 100% 3rem, 100% 100%, 0 100%); }
 
 /* formules + prijs */
 .offers{ list-style:none; margin:2rem 0 0; padding:0; }
