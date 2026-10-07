@@ -293,7 +293,7 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 .next{ margin:3rem 0 0; }
 .next + .act-grid{ margin-top:1rem; }
 /* groepsfoto als rechte band onderaan het boekvak: schuin bovenaan, links hoger */
-#formules{ padding-bottom:0; }
+
 .band-bottom{ margin:clamp(3rem, 7vw, 5rem) 0 0; }
 .band-bottom img{ display:block; width:100%; height:clamp(220px, 40vw, 560px); object-fit:cover; object-position:50% 30%;
   clip-path:polygon(0 0, 100% 3rem, 100% 100%, 0 100%); }
@@ -367,15 +367,25 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 .gift-body{ border-top:0; }
 .me h1{ font-size:var(--step-2); }
 
-/* reacties: horizontaal schuiven (swipen / scrollen), geen JavaScript */
+/* reacties: één tegelijk, gecentreerd, swipen voor de volgende (geen JavaScript) */
 .voices--scroll{
-  display:flex; grid-template-columns:none; gap:1.25rem; overflow-x:auto; scroll-snap-type:x mandatory;
-  padding:0 0 1rem; margin-right:calc(-1 * (100vw - 100%) / 2); padding-right:1rem;
-  scrollbar-width:thin; scrollbar-color:var(--ink-soft) transparent;
+  display:flex; gap:0; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth;
+  margin-top:1.5rem; padding:0; scrollbar-width:none;
 }
-.voices--scroll .voice{ flex:0 0 min(80%, 22rem); scroll-snap-align:start; padding:1.25rem; border:1px solid var(--line); }
-.voices--scroll .voice blockquote{ font-size:1.15rem; }
-.voices--scroll:focus-visible{ outline-offset:6px; }
+.voices--scroll::-webkit-scrollbar{ display:none; }
+.voices--scroll .voice{ flex:0 0 100%; scroll-snap-align:center; text-align:center; padding:0 1rem; }
+.voices--scroll .voice blockquote{ max-width:34rem; margin:0 auto; font-size:var(--step-1); }
+.voice-dots{ display:flex; justify-content:center; gap:.25rem; margin-top:1rem; }
+.voice-dots a{ display:flex; align-items:center; justify-content:center; width:44px; height:44px; }
+.voice-dots a::before{ content:""; width:10px; height:10px; border-radius:50%; border:1.5px solid currentColor; }
+.voice-dots a:hover::before{ background:currentColor; }
+.voices-cap{ text-align:center; }
+#praktisch h2, #pratique h2{ margin-bottom:.25rem; }
+/* groepsfoto tussen twee lichte vlakken */
+.band-photo--light{ background:var(--light); }
+.section-light.next-section .next, .section-light.next-section .next-p{ color:var(--on-light); }
+@media (prefers-reduced-motion:reduce){ .voices--scroll{ scroll-behavior:auto; } }
+
 /* wat nog komt: na het prijsblok */
 .next-section .next{ color:var(--ink); font-size:var(--step-2); margin-top:0; }
 .next-section .next-p{ color:var(--ink-soft); }
@@ -384,8 +394,6 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 .section-black .offers li{ border-color:var(--line); }
 .section-black .btn-ghost{ color:var(--ink); border-color:var(--ink); }
 .section-black .btn-ghost:hover{ background:var(--ink); color:var(--black); }
-.section-light .voices--scroll .voice{ border-color:var(--line-light); }
-.section-light .voices--scroll{ scrollbar-color:var(--on-light) transparent; }
 .section-light .faq, .section-light .faq details{ border-color:var(--line-light); }
 .section-light .faq details p{ color:var(--on-light); }
 .section-black .band-bottom{ margin-top:clamp(3rem, 7vw, 5rem); }
