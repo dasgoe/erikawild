@@ -435,3 +435,10 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 
 /* groepsfoto boven 'Boek je sessie': boven schuin aflopend naar rechts, onder recht */
 .band-photo--light img{ clip-path:polygon(0 0, 100% 2.5rem, 100% 100%, 0 100%); }
+
+/* losse reactie bij het onderdeel waar ze twijfel wegneemt */
+.voice--inline{ margin:2.25rem 0 0; max-width:34rem; }
+.voice--inline::before{ content:""; display:block; width:2.5rem; height:6px; margin-bottom:.9rem; background:currentColor; transform:rotate(-8deg); }
+.section-black .next{ color:var(--ink); }
+.voice--inline blockquote{ font-size:var(--step-1); }
+.walk p + p{ margin-top:.75rem; }
