@@ -449,3 +449,23 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 .band-cap .who{ display:block; margin-top:.5rem; font-size:.8rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
 .band-cap .who::before{ content:"— "; }
 .walk p + p{ margin-top:.75rem; }
+
+/* reactie als lichte band: schuine bovenrand over het zwarte vlak erboven, onderaan vloeit ze over in het lichte vlak eronder */
+.quote-band{ position:relative; margin-top:-2.5rem; background:var(--light); color:var(--on-light);
+  clip-path:polygon(0 2.5rem, 100% 0, 100% 100%, 0 100%); padding:calc(2.5rem + clamp(2rem, 5vw, 3rem)) 0 0; }
+.quote-band-strip{ margin:0 auto; width:var(--measure); }
+.quote-band-strip blockquote{ margin:0; font-family:var(--display); font-style:italic; font-size:var(--step-1); line-height:1.4; }
+.quote-band-strip blockquote p{ margin:0; }
+.quote-band-strip .mark{ background:var(--on-light); color:var(--light); }
+.quote-band-strip figcaption{ display:block; margin-top:.6rem; font-size:.8rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+.quote-band-strip figcaption::before{ content:"— "; }
+@media (min-width:860px){ .quote-band-strip{ width:min(100% - 2rem, 44rem); } }
+/* het lichte vlak na een reactieband sluit naadloos aan */
+.quote-band + .section-light{ padding-top:clamp(2rem, 5vw, 3rem); }
+main > .quote-band + .me.section-light{ margin-top:0; background-image:none; background-color:var(--light); }
+@media (max-width:859px){ main > .quote-band + .me.section-light{ padding-top:2rem; } }
+.quote-band{ margin-bottom:-1px; }
+
+/* reactieband tussen twee zwarte vlakken: schuin boven en onder */
+.quote-band--both{ z-index:1; clip-path:polygon(0 2.5rem, 100% 0, 100% calc(100% - 2.5rem), 0 100%); margin-bottom:-2.5rem; padding-bottom:calc(2.5rem + clamp(2rem, 5vw, 3rem)); }
+.quote-band--both + .section-black{ padding-top:calc(2.5rem + clamp(3rem, 6vw, 5rem)); }
