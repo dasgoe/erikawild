@@ -50,3 +50,6 @@ hero (vraag) → lint (gedicht) → kernzin + film → [licht] één experiment 
 4. Voorwaarden ook in Cal tonen vóór betaling.
 5. Toestemming voor foto's en citaten.
 6. Aparte GitHub-repo + Netlify-site.
+
+## WhatsApp
+Het gsm-nummer staat niet in de HTML. Alle WhatsApp-links gaan naar /whatsapp, /whatsapp-groupe of /whatsapp-groep; `_redirects` (Netlify) stuurt door naar wa.me. Nummer wijzigen of later een gebruikersnaam-link: enkel `_redirects` aanpassen.

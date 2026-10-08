@@ -100,7 +100,11 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 .nav-links .sep{ width:1px; height:1.2rem; background:var(--line); margin-inline:.35rem; }
 @media (max-width:520px){
   .brand-name{ font-size:.82rem; letter-spacing:.18em; }
+  .nav{ gap:.5rem; }
   .nav-links a{ padding:.5rem .5rem; letter-spacing:.12em; }
+  .nav-links .nav-book a{ letter-spacing:.06em; padding-inline:.6rem; }
+  /* op gsm enkel de andere taal tonen */
+  .nav-links .sep, .nav-links li:has(> a[aria-current="page"]){ display:none; }
 }
 @media (max-width:700px){ .nav-links .hide-sm{ display:none; } }
 .nav-links a{ white-space:nowrap; }
@@ -383,12 +387,10 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 #praktisch h2, #pratique h2{ margin-bottom:.25rem; }
 /* groepsfoto tussen twee lichte vlakken */
 .band-photo--light{ background:var(--light); }
-.section-light.next-section .next, .section-light.next-section .next-p{ color:var(--on-light); }
 @media (prefers-reduced-motion:reduce){ .voices--scroll{ scroll-behavior:auto; } }
 
 /* wat nog komt: na het prijsblok */
-.next-section .next{ color:var(--ink); font-size:var(--step-2); margin-top:0; }
-.next-section .next-p{ color:var(--ink-soft); }
+.next-section .next{ font-size:var(--step-2); margin-top:0; }
 
 /* kleuren per achtergrond (na herschikking) */
 .section-black .offers li{ border-color:var(--line); }
@@ -417,3 +419,8 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 .footer-links a{ display:inline-flex; align-items:center; min-height:44px; text-decoration:underline; text-underline-offset:3px; }
 
 @media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } }
+
+/* groep: nog geen data */
+.offer-status{ display:inline-block; margin-top:.5rem; padding:.15rem .5rem; font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; background:var(--on-light); color:var(--light); transform:rotate(-2deg); }
+.section-light .walk{ border-color:var(--line-light); }
+.section-light .walk p{ color:var(--on-light); }
