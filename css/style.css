@@ -387,7 +387,7 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 #praktisch h2, #pratique h2{ margin-bottom:.25rem; }
 /* groepsfoto tussen twee lichte vlakken */
 /* groepsfoto schuift met de schuine rand over het vlak erboven: geen spleet */
-.band-photo--light{ position:relative; margin-top:-2.5rem; background:linear-gradient(transparent 50%, var(--light) 50%); }
+.band-photo--light{ position:relative; margin-top:-2.5rem; background:linear-gradient(transparent 2.5rem, var(--light) 2.5rem); }
 @media (prefers-reduced-motion:reduce){ .voices--scroll{ scroll-behavior:auto; } }
 
 /* wat nog komt: na het prijsblok */
@@ -438,7 +438,14 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 
 /* losse reactie bij het onderdeel waar ze twijfel wegneemt */
 .voice--inline{ margin:2.25rem 0 0; max-width:34rem; }
-.voice--inline::before{ content:""; display:block; width:2.5rem; height:6px; margin-bottom:.9rem; background:currentColor; transform:rotate(-8deg); }
 .section-black .next{ color:var(--ink); }
-.voice--inline blockquote{ font-size:var(--step-1); }
+.voice--inline blockquote, .band-cap blockquote{ margin:0; font-family:var(--display); font-style:italic; font-size:1.15rem; line-height:1.5; }
+.voice--inline blockquote p, .band-cap blockquote p{ margin:0; }
+/* sterkste zin van een reactie in de blinddoek-band */
+.mark{ background:var(--ink); color:var(--black); padding:0 .25em; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+.section-light .mark, .band-cap .mark{ background:var(--on-light); color:var(--light); }
+/* reactie als onderschrift bij de groepsfoto */
+.band-cap{ width:var(--measure); margin:0 auto; padding-top:1.25rem; color:var(--on-light); }
+.band-cap .who{ display:block; margin-top:.5rem; font-size:.8rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+.band-cap .who::before{ content:"— "; }
 .walk p + p{ margin-top:.75rem; }
