@@ -386,7 +386,8 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 .voices-cap{ text-align:center; }
 #praktisch h2, #pratique h2{ margin-bottom:.25rem; }
 /* groepsfoto tussen twee lichte vlakken */
-.band-photo--light{ background:var(--light); }
+/* groepsfoto schuift met de schuine rand over het vlak erboven: geen spleet */
+.band-photo--light{ position:relative; margin-top:-2.5rem; background:linear-gradient(transparent 50%, var(--light) 50%); }
 @media (prefers-reduced-motion:reduce){ .voices--scroll{ scroll-behavior:auto; } }
 
 /* wat nog komt: na het prijsblok */
@@ -424,3 +425,13 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 .offer-status{ display:inline-block; margin-top:.5rem; padding:.15rem .5rem; font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; background:var(--on-light); color:var(--light); transform:rotate(-2deg); }
 .section-light .walk{ border-color:var(--line-light); }
 .section-light .walk p{ color:var(--on-light); }
+
+/* gsm: foto bovenaan een vlak schuift onder het vorige vlak door, de schuine hoek toont dat vlak */
+@media (max-width:859px){
+  main > * + .me{ position:relative; margin-top:-2.5rem; background-color:transparent; }
+  main > * + .me.section-black{ background-image:linear-gradient(transparent 2.5rem, var(--black) 2.5rem); }
+  main > * + .me.section-light{ background-image:linear-gradient(transparent 2.5rem, var(--light) 2.5rem); }
+}
+
+/* groepsfoto boven 'Boek je sessie': boven schuin aflopend naar rechts, onder recht */
+.band-photo--light img{ clip-path:polygon(0 0, 100% 2.5rem, 100% 100%, 0 100%); }
