@@ -421,8 +421,6 @@ video:focus-within{ outline:3px solid var(--ink); outline-offset:3px; }
 
 @media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } }
 
-/* groep: nog geen data */
-.offer-status{ display:inline-block; margin-top:.5rem; padding:.15rem .5rem; font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; background:var(--on-light); color:var(--light); transform:rotate(-2deg); }
 .section-light .walk{ border-color:var(--line-light); }
 .section-light .walk p{ color:var(--on-light); }
 
@@ -469,3 +467,7 @@ main > .quote-band + .me.section-light{ margin-top:0; background-image:none; bac
 /* reactieband tussen twee zwarte vlakken: schuin boven en onder */
 .quote-band--both{ z-index:1; clip-path:polygon(0 2.5rem, 100% 0, 100% calc(100% - 2.5rem), 0 100%); margin-bottom:-2.5rem; padding-bottom:calc(2.5rem + clamp(2rem, 5vw, 3rem)); }
 .quote-band--both + .section-black{ padding-top:calc(2.5rem + clamp(3rem, 6vw, 5rem)); }
+
+/* links in lopende tekst en in het praktische blok */
+.hero-note a, .prat dd a, .faq details p a, .split p a{ color:inherit; text-underline-offset:3px; }
+.hero-note a{ display:inline-flex; align-items:center; min-height:44px; }

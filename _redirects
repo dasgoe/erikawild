@@ -1,4 +1,2 @@
 # WhatsApp: het nummer staat niet in de html, enkel hier (server-side redirect)
 /whatsapp          https://wa.me/32465271735  302
-/whatsapp-groupe   https://wa.me/32465271735?text=Bonjour%20Erika%2C%20tiens-moi%20au%20courant%20des%20prochaines%20dates%20de%20groupe.  302
-/whatsapp-groep    https://wa.me/32465271735?text=Hallo%20Erika%2C%20hou%20me%20op%20de%20hoogte%20van%20de%20volgende%20groepsdata.  302
